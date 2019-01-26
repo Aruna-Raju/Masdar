@@ -1,0 +1,263 @@
+body{
+	background-color: #f7fAfC;
+}
+*{
+	box-sizing: border-box;
+}
+input{
+	border: 1px solid grey;
+}
+
+.navbar-custom{
+	background-color: #00457c;
+	
+}
+
+.cart_rfq{
+	padding-top: 10px;
+}
+.cart_rfq button{
+	font-size: 12px;
+	padding: 4px;
+}
+
+
+.logo{
+	width: 80px;
+	height: 50px;
+	box-shadow: 1px 2px 4px;
+}
+
+
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 69, 124);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: rgb(218,218,218);
+  font-weight: 600;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 5px;
+}
+#main span{
+	color: rgb(218,218,218);
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+.banner{
+	padding: 0px;
+	margin: 0px;
+}
+.product h3{
+	font-variant: small-caps;
+	font-size: 20px;
+	color: rgb(218,218,218);
+	background-color: rgba(0, 69, 124); 
+	padding: 5px;
+	text-align: center;
+	text-shadow: 1px 1px 2px;
+}
+.card{
+	margin: 10px 0px 10px 0px;
+	text-align: center;
+}
+
+.cardcontent{
+	border: 1px solid rgba(0, 69, 124);
+	 
+	border-radius: 5px;
+	color: rgb(218,218,218);
+	width: 250px;
+	box-shadow: 2px 2px 4px grey;
+}
+
+.overlay_text{
+	position: relative;
+	padding: 5px;
+	font-size: 10px;
+}
+
+.overlay{
+	margin-left: -5px;
+  position: absolute; 
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 69, 124,.9); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:1;
+  color: #ffffff;
+  font-size: 10px;
+  padding: 5px;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+
+
+.cardtext{
+	text-align: center;
+	color: black;
+}
+.cardtext button{
+  	margin: 5px 0px 5px 0px;
+  	background-color: #00457c;
+  	color: rgb(218,218,218);
+}
+
+
+.modal{
+	margin: 100px 10px 0px 10px;
+
+}
+.modal-header{
+	background-color: #00457c;
+	border: 1px solid rgb(218,218,218);
+	box-shadow: 0px 4px 4px grey;
+}
+.modal-header h4{
+	color: rgb(218,218,218);
+	text-align: center;
+	font-size: 15px;
+}
+.modal-body{
+	font-size: 12px;
+	color: #000000;
+	text-align: left;
+}
+.modal-body img{
+	height: 100px;
+}
+.modal-header button{
+	font-size: 10px;
+
+}
+.modal-footer button{
+	background-color: #00457c;
+	box-shadow: 2px 2px 4px black;
+	font-variant: small-caps;
+}
+
+
+
+
+@media screen and (min-width: 768px){
+
+.navbar-nav li a{ 
+	margin: 10px;
+	font-size: 20px;
+	color: #00457c;
+	padding: 5px;
+	font-variant: small-caps;
+	border: 1px solid #00457c;
+	margin: 0px 5px 0px 5px;
+	border-radius: 3px;
+}
+.navbar-nav li a:hover{
+	background-color: #00457c;
+	color: rgb(218,218,218);
+}
+
+
+.navbar-nav{
+	padding-top: 10px;
+	padding-right: 15px;
+}
+
+.logo{
+	padding-left: 10px;
+	width: 80%;
+	height: 80%;
+}
+
+.carousel-inner .item img{
+	width: 100%;
+	height: 400px;
+}
+.product h3{
+	font-variant: small-caps;
+}
+.breadcrumb li {
+  display: inline;
+  font-size: 15px;
+}
+
+.card{
+	
+	padding: 10px;
+	margin: 0px;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cardcontent img{
+	border-radius: 10px;
+}
+
+.cardtext{
+	margin: 10px;
+	text-align: center;
+}
+
+.cardtext button{
+  	font-size: 15px;
+  	text-align: center;
+}
+
+
+}
