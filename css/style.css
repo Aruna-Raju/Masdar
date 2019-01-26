@@ -145,17 +145,15 @@ input{
   	margin: 5px 0px 5px 0px;
   	background-color: #00457c;
   	color: rgb(218,218,218);
+  	font-size: 10px;
 }
 
 
 .modal{
 	margin: 100px 10px 0px 10px;
-
 }
 .modal-header{
-	background-color: #00457c;
-	border: 1px solid rgb(218,218,218);
-	box-shadow: 0px 4px 4px grey;
+	
 }
 .modal-header h4{
 	color: rgb(218,218,218);
@@ -175,7 +173,7 @@ input{
 
 }
 .modal-footer button{
-	background-color: #00457c;
+	color: #00457c;
 	box-shadow: 2px 2px 4px black;
 	font-variant: small-caps;
 }
