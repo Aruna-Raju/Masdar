@@ -1,5 +1,6 @@
 body{
 	background-color: #f7fAfC;
+	font-family:'Open Sans',sans-serif;
 }
 *{
 	box-sizing: border-box;
@@ -10,9 +11,7 @@ input{
 
 .navbar-custom{
 	background-color: #00457c;
-	
 }
-
 .cart_rfq{
 	padding-top: 10px;
 }
@@ -80,6 +79,17 @@ input{
 }
 
 
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
 
 
 
@@ -183,10 +193,15 @@ input{
 
 
 @media screen and (min-width: 768px){
-
+body{
+	font-size: 15px;
+}
+.navbar-custom{
+	background-color: white;
+}
 .navbar-nav li a{ 
 	margin: 10px;
-	font-size: 20px;
+	font-size: 15px;
 	color: #00457c;
 	padding: 5px;
 	font-variant: small-caps;
@@ -198,13 +213,10 @@ input{
 	background-color: #00457c;
 	color: rgb(218,218,218);
 }
-
-
 .navbar-nav{
 	padding-top: 10px;
 	padding-right: 15px;
 }
-
 .logo{
 	padding-left: 10px;
 	width: 80%;
@@ -260,3 +272,10 @@ input{
 
 
 }
+
+
+
+
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgba(228,121,17,.5);
+   

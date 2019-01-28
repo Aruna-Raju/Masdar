@@ -29,10 +29,14 @@
 					<a href="index.html"><img class="img-responsive logo" src="image/mada.png" ></a>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
-			        <li><a href="#">Sign Up</a></li>
-			        <li><a href="#">Login</a></li>
 			        <li><a href="cart_page.html"><i class="fas fa-cart-plus"></i></a></li>
 			        <li><a href="rfq_page.html">RFQ</a></li>
+			        <li><a href="login_signup.html">Login/Sign Up</a></li>
+			        <li><a href="#" class="dropbtn">My Account<i class="fa fa-caret-down"></i></a></li>
+			        <div class="dropdown-container">
+					    <a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;My Profile</a>
+					    <a href="#"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;&nbsp;My Address</a>
+					</div>
 			    </ul>
 			</nav>
 
@@ -40,15 +44,18 @@
 			    <div class="col-xs-4 navbar-header">
 			    	<div id="mySidenav" class="sidenav">
 					  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-					  <a href="index.html">Home</a>
-					  <a href="#">Sign Up/Login</a>
-					  <a href="#">My Account</a>
-					  <a href="#">My Orders</a>
-					  <a href="cart_page.html">My Carts</a>
-					  <a href="rfq_page.html">My RFQ List</a>
-					  <a href="#">Delivery Address</a>
-					  
+					  <a href="index.html"><i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
+					  <a href="#" class="dropdown-btn"><i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Account</a>
+					  	<div class="dropdown-container">
+						    <a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;My Profile</a>
+					    	<a href="#"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;&nbsp;My Address</a>
+						</div>
+					  <a href="#"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Orders</a>
+					  <a href="rfq_page.html"><button class="btn btn-default btn-xs" style="font-size: 8px; padding: 2px;margin-left: -5px;">RFQ</button>&nbsp;&nbsp;&nbsp;&nbsp;My RFQ List</a>
+					  <a href="#"><img src="image/icon.png" width="30px" height="30px" style="margin-left: -10px">&nbsp; &nbsp;Support</a>
+					  <a href="#"><i class="fas fa-sign-out-alt"></i>&nbsp; &nbsp;&nbsp;&nbsp;Logout</a>
 					</div>
+
 
 					<div id="main">
 					  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
@@ -75,37 +82,37 @@
 		<div class="row product">
 			<h3>Steel Products</h3>
 			<div class="col-sm-12">
-				<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">	
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">	
 					<div class="overlay_text">
 								<center><a href="index3.html"><img class="img-responsive img-thumbnail" src="image//OTHER STEEL PRODUCTS.png"></a></center>
 								<div class="overlay">Reinforcing Steel</div>
 							</div>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">	
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">	
 					<div class="overlay_text">
 								<center><a href="#"><img class="img-responsive img-thumbnail" src="image/STEEL BEAMS AND CHANNELS.png"></a></center>
 								<div class="overlay">Steel Beams and Channels</div>
 							</div>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">	
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">	
 					<div class="overlay_text">
 								<center><a href="#"><img class="img-responsive img-thumbnail" src="image/STEEL PROFILES.png"></a></center>
 								<div class="overlay">Steel profiles</div>
 							</div>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">	
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">	
 					<div class="overlay_text">
 								<center><a href="#"><img class="img-responsive img-thumbnail" src="image/STEEL TUBES & PIPES.png"></a></center>
 								<div class="overlay">Steel Tubes and Pipes</div>
 							</div>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">	
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">	
 					<div class="overlay_text">
 								<center><a href="#"><img class="img-responsive img-thumbnail" src="image/STEEL SHEETS & COILS.png"></a></center>
 								<div class="overlay">Steel Sheets & Coils</div>
 							</div>
 				</div>
-				<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">	
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">	
 					<div class="overlay_text">
 								<center><a href="#"><img class="img-responsive img-thumbnail" src="image/OTHER STEEL PRODUCTS.png"></a></center>
 								<div class="overlay">Other Steel Products</div>
@@ -191,6 +198,23 @@
 	  document.getElementById("main").style.marginLeft= "0";
 	  document.body.style.backgroundColor = "white";
 	}
+	</script>
+
+	<script type="text/javascript">
+		var dropdown = document.getElementsByClassName("dropdown-btn");
+		var i;
+
+		for (i = 0; i < dropdown.length; i++) {
+		  dropdown[i].addEventListener("click", function() {
+		  this.classList.toggle("active");
+		  var dropdownContent = this.nextElementSibling;
+		  if (dropdownContent.style.display === "block") {
+		  dropdownContent.style.display = "none";
+		  } else {
+		  dropdownContent.style.display = "block";
+		  }
+		  });
+		}
 	</script>
 
 </body>
