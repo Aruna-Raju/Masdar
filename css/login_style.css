@@ -58,10 +58,11 @@ a{color:inherit;text-decoration:none}
 	margin:0 15px 10px 0;
 	display:inline-block;
 	border-bottom:2px solid transparent;
+	color: #EF3125;
 }
 .login-html .sign-in:checked + .tab,
 .login-html .sign-up:checked + .tab{
-	color:rgb(0, 69, 124);
+	color: #EF3125;
 	border-color:#1161ee;
 }
 .login-form{
@@ -182,6 +183,11 @@ a{color:inherit;text-decoration:none}
   background-color: #666;
   color: white;
 }
+
+.lang_button button{
+	color: black;
+}
+
 
 @media screen and (max-width: 450px){
 body{
