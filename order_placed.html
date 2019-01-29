@@ -19,9 +19,76 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
+
+	<style type="text/css">
+		ol.progtrckr {
+        display: table;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        table-layout: fixed;
+        width: 100%;
+    }
+    ol.progtrckr li {
+        display: table-cell;
+        text-align: center;
+        line-height: 3em;
+    }
+
+    ol.progtrckr[data-progtrckr-steps="2"] li { width: 49%; }
+    ol.progtrckr[data-progtrckr-steps="3"] li { width: 33%; }
+    ol.progtrckr[data-progtrckr-steps="4"] li { width: 24%; }
+    ol.progtrckr[data-progtrckr-steps="5"] li { width: 19%; }
+    ol.progtrckr[data-progtrckr-steps="6"] li { width: 16%; }
+    ol.progtrckr[data-progtrckr-steps="7"] li { width: 14%; }
+    ol.progtrckr[data-progtrckr-steps="8"] li { width: 12%; }
+    ol.progtrckr[data-progtrckr-steps="9"] li { width: 11%; }
+
+    ol.progtrckr li.progtrckr-done {
+        color: black;
+        border-bottom: 4px solid yellowgreen;
+        font-size: 10px;
+    }
+    ol.progtrckr li.progtrckr-todo {
+        color: silver; 
+        border-bottom: 4px solid silver;
+        font-size: 10px;
+    }
+
+    ol.progtrckr li:after {
+        content: "\00a0\00a0";
+    }
+    ol.progtrckr li:before {
+        position: relative;
+        bottom: -2.5em;
+        float: left;
+        left: 50%;
+        line-height: 1em;
+    }
+    ol.progtrckr li.progtrckr-done:before {
+        content: "\2713";
+        color: white;
+        background-color: yellowgreen;
+        height: 1.2em;
+        width: 1.2em;
+        line-height: 1.2em;
+        border: none;
+        border-radius: 1.2em;
+    }
+    ol.progtrckr li.progtrckr-todo:before {
+        content: "\039F";
+        color: silver;
+        background-color: white;
+        font-size: 1.5em;
+        bottom: -1.6em;
+    }
+	</style>
 </head>
 
-<body>
+<body >
+
+	<!--<img id="loader" src="image/masdar.png"/>-->
+
 	<div class="container-fluid">
 		<div class="row">
 			<nav class="navbar navbar-custom navbar-fixed-top hidden-xs">
@@ -32,14 +99,14 @@
 			        <li><a href="cart_page.html"><i class="fas fa-cart-plus"></i></a></li>
 			        <li><a href="rfq_page.html">RFQ</a></li>
 			        <li><a href="login_signup.html">Login/Sign Up</a></li>
-			        <li><a href="#" class="dropbtn">My Account<i class="fa fa-caret-down"></i></a></li>
+			       <li><a href="#" class="dropbtn">My Account<i class="fa fa-caret-down"></i></a></li>
 			        <div class="dropdown-container">
 					    <a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;My Profile</a>
 					    <a href="#"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;&nbsp;My Address</a>
 					</div>
 			    </ul>
 			</nav>
-
+			
 			<nav class="navbar navbar-custom navbar-fixed-top hidden-lg hidden-md hidden-sm">
 			    <div class="col-xs-4 navbar-header">
 			    	<div id="mySidenav" class="sidenav">
@@ -51,7 +118,7 @@
 						    <a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;My Profile</a>
 					    	<a href="#"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;&nbsp;My Address</a>
 						</div>
-					  <a href="myorders.html"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Orders</a>
+					  <a href="#"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Orders</a>
 					  <a href="#"><button class="btn btn-default btn-xs" style="font-size: 8px; padding: 2px;margin-left: -5px;">RFQ</button>&nbsp;&nbsp;&nbsp;&nbsp;My RFQ List</a>
 					  <a href="#"><img src="image/icon.png" width="30px" height="30px" style="margin-left: -10px">&nbsp; &nbsp;Support</a>
 					  <a href="#"><i class="fas fa-sign-out-alt"></i>&nbsp; &nbsp;&nbsp;&nbsp;Logout</a>
@@ -71,57 +138,40 @@
 			    </div>
 			</nav>
 		</div>
-
-
-		<div class="empty" style="height: 53px;"></div>
-
-		<div class="row" style="">
-			<div class="col-sm-12 banner">
-				<img class="img-responsive bannerimg" src="image/banner.jpg" width="100%" height="100%">
-			</div>
-		</div>
-		<div class="row product">
-			<h3>Steel Products</h3>
-			<div class="col-sm-12">
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">	
-					<div class="overlay_text">
-								<center><a href="index3.html"><img class="img-responsive img-thumbnail" src="image//OTHER STEEL PRODUCTS.png"></a></center>
-								<div class="overlay">Reinforcing Steel</div>
-							</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">	
-					<div class="overlay_text">
-								<center><a href="#"><img class="img-responsive img-thumbnail" src="image/STEEL BEAMS AND CHANNELS.png"></a></center>
-								<div class="overlay">Steel Beams and Channels</div>
-							</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">	
-					<div class="overlay_text">
-								<center><a href="#"><img class="img-responsive img-thumbnail" src="image/STEEL PROFILES.png"></a></center>
-								<div class="overlay">Steel profiles</div>
-							</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">	
-					<div class="overlay_text">
-								<center><a href="#"><img class="img-responsive img-thumbnail" src="image/STEEL TUBES & PIPES.png"></a></center>
-								<div class="overlay">Steel Tubes and Pipes</div>
-							</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">	
-					<div class="overlay_text">
-								<center><a href="#"><img class="img-responsive img-thumbnail" src="image/STEEL SHEETS & COILS.png"></a></center>
-								<div class="overlay">Steel Sheets & Coils</div>
-							</div>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">	
-					<div class="overlay_text">
-								<center><a href="#"><img class="img-responsive img-thumbnail" src="image/OTHER STEEL PRODUCTS.png"></a></center>
-								<div class="overlay">Other Steel Products</div>
-							</div>
-				</div>
-			</div>
-		</div>
 	</div>
+	<div class="empty" style="height: 55px;"></div>
+
+	<center><h4>Order ID : ID001</h4></center>
+
+
+
+
+
+	<h6>SUMMARY</h6>
+	<div class="container" style="font-size: 10px;">
+		<div class="process_bar">
+			<ol class="progtrckr" data-progtrckr-steps="5">
+			    <li class="progtrckr-done">Placed</li>
+			    <li class="progtrckr-todo" style="white-space: nowrap;">In Process</li>
+			    <li class="progtrckr-todo" style="white-space: nowrap;">On The Way</li>
+			    <li class="progtrckr-todo">Delivered</li>
+			</ol>
+		</div>
+	
+
+	<br><br>
+	<br><br>
+
+	
+		<span class="col-xs-5">Delivery Requested Date :</span><span class="col-xs-7"style="border: 1px solid grey; padding: 5px;">25/01/2019</span>
+		<br><br><br>
+		<span class="col-xs-5">Delivery Addresss :</span><span class="col-xs-7" style="border: 1px solid grey; padding: 5px;">Saudi Arabia</span>
+		<br><br><br>
+		<span class="col-xs-5">Payment Details :</span><span class="col-xs-7" style="border: 1px solid grey; padding: 5px;">Cash On Delivery</span>
+	</div>
+
+
+
 
 	<script>
 	function openNav() {
@@ -153,6 +203,7 @@
 		  });
 		}
 	</script>
+
 
 </body>
 </html>
