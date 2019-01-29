@@ -100,25 +100,26 @@
 						        	<div class="modal-header">
 						        		<h4 class="modal-title" style="text-transform: uppercase;">Add to Cart</h4>
 						        	</div>
-						        	<div class="modal-body" style=" background-color: white;margin: 10px 0px 10px 0px; width:80%; border-radius: 2px;">
+						        	<div class="modal-body" style=" background-color: white;margin: 10px 0px 10px 0px; width:80%; border-radius: 2px; box-sizing: border-box; padding:20px;">
 						        		<div class="row">
 						        			
 							        		<center><img class="" src="image/2.1.png"></center>
 							        		<center><h5 style="font-size: 13px; text-transform: uppercase; color: #00457c;">Deformed Steel Bars & Rebar in Coils</h5></center>
-							        		<form action="/action_page.php" style="margin-left: 10px;">
-							        			<label>Quantity :</label>
-												<input type="numbertext" name="quantity" placeholder="Quantity" size="10">
-												<select name="Unit">
-													<option value="Ton">Ton</option>
-													<option value="Kg">Kg</option>
-												</select>
-												<br>
-												<label>Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
-												<input type="numbertext" name="quantity" placeholder="240 SAR/TON" size="10" disabled="disabled">
+							        		<form class="form-horizontal" action="/action_page.php">
+							        			<div class="form-group" style="margin: 0px;">
+							        				<label class="control-label col-xs-4" style="text-align:right; padding-left: 0px; padding-top: 4px;">Quantity:</label>
+													<div class="col-xs-4" style="padding: 0px;"><input class="form-control input-sm" type="number" name="quantity" placeholder="Quantity"></div>
+													<div class="col-xs-3" style="padding: 0px;"><select name="Unit" class="form-control input-sm" style="padding: 0px;">
+														<option value="Ton">Ton</option>
+														<option value="Kg">Kg</option>
+													</select></div>
+												</div>
+												<div class="form-group" style="margin: 0px; padding-top: 5px;">
+							        				<label class="control-label col-xs-4" style="text-align:right; padding-left: 0px; padding-top: 4px;">Price:</label>
+													<div class="col-xs-7 col-sm-4" style="padding: 0px;"><input class="form-control input-sm" type="numbertext" name="quantity" placeholder="240 SAR/TON" size="20" disabled="disabled"></div>
+												</div>
 											</form>
-											
 										</div>
-
 						        	</div>
 						        	<div class="modal-footer">
 						        		<div class="row">
@@ -139,22 +140,24 @@
 						        	<div class="modal-header">
 						        		<h4 class="modal-title" style="text-transform: uppercase;">Add to RFQ</h4>
 						        	</div>
-						        	<div class="modal-body" style=" background-color: white;margin: 10px 0px 10px 0px; width:80%; border-radius: 2px;">
+						        	<div class="modal-body" style=" background-color: white;margin: 10px 0px 10px 0px; width:80%; border-radius: 2px; box-sizing: border-box; padding:20px;">
 						        		<div class="row">
 						        			
 							        		<center><img class="" src="image/2.1.png"></center>
 							        		<center><h5 style="font-size: 13px; text-transform: uppercase; color: #00457c;">Deformed Steel Bars & Rebar in Coils</h5></center>
-							        		<form action="/action_page.php" style="margin-left: 10px;">
-							        			<div class="row form-group">
-							        			<div class="col-xs-4" style="border:  1px solid red; padding: 0px"><label>Quantity :</label></div>
-												<div class="col-xs-5" style="border:  1px solid red"><input class="form-control" type="number" name="quantity" placeholder="Quantity"></div>
-												<div class="col-xs-3" style="border: 1px solid red"><select name="Unit" class="form-control" >
-													<option value="Ton">Ton</option>
-													<option value="Kg">Kg</option>
-												</select></div></div>
-												<br>
-												<label>Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
-												<input type="numbertext" name="quantity" placeholder="240 SAR/TON" size="10" disabled="disabled">
+							        		<form class="form-horizontal" action="/action_page.php">
+							        			<div class="form-group" style="margin: 0px;">
+							        				<label class="control-label col-xs-4" style="text-align:right; padding-left: 0px; padding-top: 4px;">Quantity:</label>
+													<div class="col-xs-4" style="padding: 0px;"><input class="form-control input-sm" type="number" name="quantity" placeholder="Quantity"></div>
+													<div class="col-xs-3" style="padding: 0px;"><select name="Unit" class="form-control input-sm" style="padding: 0px;">
+														<option value="Ton">Ton</option>
+														<option value="Kg">Kg</option>
+													</select></div>
+												</div>
+												<div class="form-group" style="margin: 0px; padding-top: 5px;">
+							        				<label class="control-label col-xs-4" style="text-align:right; padding-left: 0px; padding-top: 4px;">Price:</label>
+													<div class="col-xs-7 col-sm-4" style="padding: 0px;"><input class="form-control input-sm" type="numbertext" name="quantity" placeholder="240 SAR/TON" size="20" disabled="disabled"></div>
+												</div>
 											</form>
 											
 										</div>
