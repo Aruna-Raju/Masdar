@@ -162,7 +162,7 @@
 							<ol class="progtrckr" data-progtrckr-steps="5">
 							    <li class="progtrckr-done">Placed</li>
 							    <li class="progtrckr-done" style="white-space: nowrap;">In Process</li>
-							    <li class="progtrckr-todo" style="white-space: nowrap;">On The Way</li>
+							    <li class="progtrckr-done" style="white-space: nowrap;">On The Way</li>
 							    <li class="progtrckr-todo">Delivered</li>
 							</ol>
 						</div>
@@ -245,58 +245,6 @@
 			</div>
 	</div>
 
-
-	<br/>
-<div class="row">
-    <div class="col-md-12">
-         <h6>Datetimepicker</h6>
-
-        <label for="date">Date:</label>
-		<input id="date" data-provide="datepicker">
-</div>
-</div>
-
-
-
-<script type="text/javascript">
-	
-var date = new Date();
-date.setDate(date.getDate());
-
-$('#date').datepicker({ 
-    startDate: date
-});
-
-
-</script>
-
-
-<!--
-
-	<label for="name" class="control-label" style="display: inline-block;">
-		<p class="text-info">9876543210</p>
-		<div class="controls">
-        	<a href="#" id="edit" class="btn">Edit</a>
-    	</div>
-	</label>
-    
-	
-    <script type="text/javascript">
-    	$('#edit').click(function() {
-		    var text = $('.text-info').text();
-		    var input = $('<input id="attribute" value="' + text + '" />')
-		    $('.text-info').text('').append(input);
-		    input.select();
-
-		    input.blur(function() {
-		        var text = $('#attribute').val();
-		        $('#attribute').parent().text(text);
-		        $('#attribute').remove();
-		    });
-		});
-    </script>
-
--->
 
 	<script>
 	function openNav() {

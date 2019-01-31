@@ -21,13 +21,20 @@
 
 
 	<style type="text/css">
-		ol.progtrckr {
+
+	#process_tracker_xs{
+		width: 100%;
+	}
+	#process_tracker_lg{
+		width: 80%;
+	}
+
+	ol.progtrckr {
         display: table;
         list-style-type: none;
         margin: 0;
         padding: 0;
         table-layout: fixed;
-        width: 100%;
     }
     ol.progtrckr li {
         display: table-cell;
@@ -46,12 +53,12 @@
 
     ol.progtrckr li.progtrckr-done {
         color: black;
-        border-bottom: 4px solid yellowgreen;
+        border-bottom: 2px dashed yellowgreen;
         font-size: 10px;
     }
     ol.progtrckr li.progtrckr-todo {
         color: silver; 
-        border-bottom: 4px solid silver;
+        border-bottom: 2px dashed silver;
         font-size: 10px;
     }
 
@@ -82,6 +89,21 @@
         font-size: 1.5em;
         bottom: -1.6em;
     }
+
+    .nav-tabs li:active{
+    	box-shadow: 0 0 3px 2px grey;
+    }
+
+    .tab-pane{
+    	box-shadow: 0 0 3px 2px grey;
+    	height: 100%;
+    	background-color: white;
+
+    }
+
+    
+
+
 	</style>
 </head>
 
@@ -99,11 +121,12 @@
 			        <li><a href="cart_page.html"><i class="fas fa-cart-plus"></i></a></li>
 			        <li><a href="rfq_page.html">RFQ</a></li>
 			        <li><a href="login_signup.html">Login/Sign Up</a></li>
-			       <li><a href="#" class="dropbtn">My Account<i class="fa fa-caret-down"></i></a></li>
-			        <div class="dropdown-container">
-					    <a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;My Profile</a>
-					    <a href="#"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;&nbsp;My Address</a>
-					</div>
+			        <li><a href="#">My Profile</a></li>
+			        <li><a href="#">My Address</a></li>
+			        <li><a href="myorders.html">My Orders</a></li>
+			        <li><a href="#">My RFQ List</a></li>
+			        <li><a href="#">Support</a></li>
+			        <li><a href="#">Logout</a></li>
 			    </ul>
 			</nav>
 			
@@ -118,7 +141,7 @@
 						    <a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;My Profile</a>
 					    	<a href="#"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;&nbsp;My Address</a>
 						</div>
-					  <a href="#"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Orders</a>
+					  <a href="myorders.html"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Orders</a>
 					  <a href="#"><button class="btn btn-default btn-xs" style="font-size: 8px; padding: 2px;margin-left: -5px;">RFQ</button>&nbsp;&nbsp;&nbsp;&nbsp;My RFQ List</a>
 					  <a href="#"><img src="image/icon.png" width="30px" height="30px" style="margin-left: -10px">&nbsp; &nbsp;Support</a>
 					  <a href="#"><i class="fas fa-sign-out-alt"></i>&nbsp; &nbsp;&nbsp;&nbsp;Logout</a>
@@ -157,25 +180,67 @@
 			<div class="tab-content ">
 				<div class="tab-pane active" id="1">
           			<div class="container" style="font-size: 10px;">
-						<div class="process_bar">
-							<ol class="progtrckr" data-progtrckr-steps="5">
-							    <li class="progtrckr-done">Placed</li>
-							    <li class="progtrckr-todo" style="white-space: nowrap;">In Process</li>
-							    <li class="progtrckr-todo" style="white-space: nowrap;">On The Way</li>
-							    <li class="progtrckr-todo">Delivered</li>
-							</ol>
+          					<br class="hidden-xs"><br class="hidden-xs">
+
+          				<div class="hidden-lg hidden-md hidden-sm">
+          					<br>
+							<div class="process_bar" id="process_tracker_xs">
+								<center><ol class="progtrckr" data-progtrckr-steps="5">
+								    <li class="progtrckr-done">Placed</li>
+								    <li class="progtrckr-todo" style="white-space: nowrap;">In Process</li>
+								    <li class="progtrckr-todo" style="white-space: nowrap;">On The Way</li>
+								    <li class="progtrckr-todo">Delivered</li>
+								</ol></center>
+							</div>	
 						</div>
-					
+
+						<div class="hidden-xs">
+							<div class="col-sm-2"></div>
+							<div class="process_bar col-sm-" id="process_tracker_lg">
+								<center><ol class="progtrckr" data-progtrckr-steps="5">
+								    <li class="progtrckr-done">Placed</li>
+								    <li class="progtrckr-todo" style="white-space: nowrap;">In Process</li>
+								    <li class="progtrckr-todo" style="white-space: nowrap;">On The Way</li>
+								    <li class="progtrckr-todo">Delivered</li>
+								</ol></center>
+							</div>
+							<div class="col-sm-2"></div>
+						</div>
+
+						
 					<br><br>
-					<br><br>
+					<br class="hidden-xs"><br class="hidden-xs">
 					
-						<span class="col-xs-5">Delivery Requested Date :</span><span class="col-xs-7"style="border: 1px solid grey; padding: 5px;">25/01/2019</span>
-						<br><br><br>
-						<span class="col-xs-5">Delivery Addresss :</span><span class="col-xs-7" style="border: 1px solid grey; padding: 5px;">Saudi Arabia</span>
-						<br><br><br>
-						<span class="col-xs-5">Payment Details :</span><span class="col-xs-7" style="border: 1px solid grey; padding: 5px;">Cash On Delivery</span>
+						<form class="hidden-lg hidden-md hidden-sm">
+						    <div class="form-group">
+						      <label for="delivery date">Delivery Requested Date :</label>
+						      <input class="form-control" type="date" id="delivery date" value="2019-02-10" readonly="readonly" style="font-size: 10px;">
+						      <label for="delivery address">Delivery Address :</label>
+      							<textarea class="form-control" rows="4" id="delivery address" readonly="readonly"  style="font-size: 10px;">Saroj Square 1, 4th Floor Silver Spring Road, Whitefield Main Road, Kundanahalli, Bengaluru</textarea>
+      							<label for="payment">Payment Details :</label>
+      							<input class="form-control" type="text" id="payment" value="Pay On Delivery" readonly="readonly" style="font-size: 10px;">
+						    </div>
+      						<br>
+						  </form>
+
+						  <form class="hidden-xs">
+						  	<div class="col-sm-3"></div>
+						    <div class="form-group col-sm-6">
+						      <label for="delivery date">Delivery Requested Date :</label>
+						      <input class="form-control" type="date" id="delivery date" value="2019-02-10" readonly="readonly" style="font-size: 10px;">
+						      <label for="delivery address">Delivery Address :</label>
+      							<textarea class="form-control" rows="4" id="delivery address" readonly="readonly"  style="font-size: 10px;">Saroj Square 1, 4th Floor Silver Spring Road, Whitefield Main Road, Kundanahalli, Bengaluru</textarea>
+      							<label for="payment">Payment Details :</label>
+      							<input class="form-control" type="text" id="payment" value="Pay On Delivery" readonly="readonly" style="font-size: 10px;">
+						    </div>
+						    <br><br>
+						    <div class="col-sm-3"></div>
+						    
+						  </form>
+
 					</div>
 				</div>
+
 				<div class="tab-pane" id="2">
           			<div class="row addcart_item1" style="border: 1px solid grey; box-shadow: 2px 2px 4px grey; padding: 5px; font-size: 10px; margin-top: 10px; background-color: #ffffff;">
 						<div class="row itemdetails_1">
