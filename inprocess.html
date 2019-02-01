@@ -16,14 +16,13 @@
 	<link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 
-	<link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
-
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+
 
 	<style type="text/css">
-		ol.progtrckr {
+
+	ol.progtrckr {
         display: table;
         list-style-type: none;
         margin: 0;
@@ -48,12 +47,12 @@
 
     ol.progtrckr li.progtrckr-done {
         color: black;
-        border-bottom: 1px dashed yellowgreen;
+        border-bottom: 2px dashed yellowgreen;
         font-size: 10px;
     }
     ol.progtrckr li.progtrckr-todo {
         color: silver; 
-        border-bottom: 1px dashed silver;
+        border-bottom: 2px dashed silver;
         font-size: 10px;
     }
 
@@ -84,6 +83,17 @@
         font-size: 1.5em;
         bottom: -1.6em;
     }
+
+    .tab-pane{
+    	box-shadow: 0 0 3px 2px grey;
+    	height: 100%;
+    	background-color: white;
+
+    }
+
+    
+
+
 	</style>
 </head>
 
@@ -101,9 +111,8 @@
 			        <li><a href="cart_page.html"><i class="fas fa-cart-plus"></i></a></li>
 			        <li><a href="rfq_page.html">RFQ</a></li>
 			        <li><a href="login_signup.html">Login/Sign Up</a></li>
-			        <li><a href="#">My Profile</a></li>
-			        <li><a href="#">My Address</a></li>
-			        <li><a href="myorders.html>My Orders</a></li>
+			        <li><a href="#">My Account</a></li>
+			        <li><a href="myorders.html">My Orders</a></li>
 			        <li><a href="#">My RFQ List</a></li>
 			        <li><a href="#">Support</a></li>
 			        <li><a href="#">Logout</a></li>
@@ -116,11 +125,7 @@
 					  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					  <a href="index.html"><i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
 					  <a href="login_signup.html"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp; &nbsp;Login/Sign Up</a>
-					  <a href="#" class="dropdown-btn"><i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Account</a>
-					  	<div class="dropdown-container">
-						    <a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;My Profile</a>
-					    	<a href="#"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;&nbsp;My Address</a>
-						</div>
+					  <a href="#"><i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Account</a>
 					  <a href="myorders.html"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Orders</a>
 					  <a href="#"><button class="btn btn-default btn-xs" style="font-size: 8px; padding: 2px;margin-left: -5px;">RFQ</button>&nbsp;&nbsp;&nbsp;&nbsp;My RFQ List</a>
 					  <a href="#"><img src="image/icon.png" width="30px" height="30px" style="margin-left: -10px">&nbsp; &nbsp;Support</a>
@@ -145,29 +150,52 @@
 	<div class="empty" style="height: 55px;"></div>
 
 	<center><h4>Order ID : ID002</h4></center>
-	
+
+
 	<div id="exTab2" class="container">	
 		<ul class="nav nav-tabs">
 			<li class="active">
         		<a  href="#1" data-toggle="tab">Summary</a>
 			</li>
-			<li><a href="#2" data-toggle="tab">Items</a>
+			<li>
+				<a href="#2" data-toggle="tab">Items</a>
 			</li>
 		</ul>
 
 			<div class="tab-content ">
 				<div class="tab-pane active" id="1">
           			<div class="container" style="font-size: 10px;">
-						<div class="process_bar">
-							<ol class="progtrckr" data-progtrckr-steps="5">
-							    <li class="progtrckr-done">Placed</li>
-							    <li class="progtrckr-done" style="white-space: nowrap;">In Process</li>
-							    <li class="progtrckr-todo" style="white-space: nowrap;">On The Way</li>
-							    <li class="progtrckr-todo">Delivered</li>
-							</ol>
+          					<br class="hidden-xs"><br class="hidden-xs">
+          				<div class="row hidden-lg hidden-md hidden-sm">
+          					<br>
+							<div class="process_bar col-xs-12">
+								<center><ol class="progtrckr" data-progtrckr-steps="5">
+								    <li class="progtrckr-done">Placed</li>
+								    <li class="progtrckr-done" style="white-space: nowrap;">In Process</li>
+								    <li class="progtrckr-todo" style="white-space: nowrap;">On The Way</li>
+								    <li class="progtrckr-todo">Delivered</li>
+								</ol></center>
+							</div>	
 						</div>
-						<br><br>
-						<form>
+
+						<div class="row hidden-xs">
+							<div class="col-sm-3"></div>
+							<div class="process_bar col-sm-6">
+								<center><ol class="progtrckr col-sm-12" data-progtrckr-steps="5">
+								    <li class="progtrckr-done">Placed</li>
+								    <li class="progtrckr-done" style="white-space: nowrap;">In Process</li>
+								    <li class="progtrckr-todo" style="white-space: nowrap;">On The Way</li>
+								    <li class="progtrckr-todo">Delivered</li>
+								</ol></center>
+							</div>
+							<div class="col-sm-3"></div>
+						</div>
+
+						
+					<br><br>
+					<br class="hidden-xs"><br class="hidden-xs">
+					
+						<form class="hidden-lg hidden-md hidden-sm">
 						    <div class="form-group">
 						      <label for="delivery date">Delivery Requested Date :</label>
 						      <input class="form-control" type="date" id="delivery date" value="2019-02-10" readonly="readonly" style="font-size: 10px;">
@@ -176,127 +204,119 @@
       							<label for="payment">Payment Details :</label>
       							<input class="form-control" type="text" id="payment" value="Pay On Delivery" readonly="readonly" style="font-size: 10px;">
 						    </div>
-						  </form>
+      						<br><br>
+						</form>
+
+						<form class="hidden-xs">
+						  	<div class="col-sm-3"></div>
+						    <div class="form-group col-sm-6">
+						      <label for="delivery date">Delivery Requested Date :</label>
+						      <input class="form-control" type="date" id="delivery date" value="2019-02-10" readonly="readonly" style="font-size: 10px;">
+						      <label for="delivery address">Delivery Address :</label>
+      							<textarea class="form-control" rows="4" id="delivery address" readonly="readonly"  style="font-size: 10px;">Saroj Square 1, 4th Floor Silver Spring Road, Whitefield Main Road, Kundanahalli, Bengaluru</textarea>
+      							<label for="payment">Payment Details :</label>
+      							<input class="form-control" type="text" id="payment" value="Pay On Delivery" readonly="readonly" style="font-size: 10px;">
+						    </div>
+						    <div class="col-sm-3"></div>
+						</form>
+
 					</div>
 				</div>
-				<div class="tab-pane" id="2">
-	          		<div class="row addcart_item1" style="border: 1px solid grey; box-shadow: 2px 2px 4px grey; padding: 5px; font-size: 10px; margin-top: 10px; background-color: #ffffff;">
-						<div class="row itemdetails_1">
-							<div class="col-xs-1">
-								<span>1.</span>
+
+				<div class="container tab-pane" id="2" style="font-size: 10px;">
+          			<div class="row addcart_item1" style="border: 1px solid lightgrey;padding: 5px; font-size: 10px; margin: 5px; background-color: #ffffff; box-shadow: 0 0 3px 2px lightgrey;">
+						<div class="=itemdetails_1 col-xs-12">
+							<div class="row">
+								<div class="col-xs-1">
+									<span>1.</span>
+								</div>
+								<div class="col-xs-2" style="margin: 0px; padding: 0px;">
+									<img src="image/2.1.png" width="50px"/>
+								</div>
+								<div class="col-xs-6">
+									<span>Deformed Steel Bars & Rebar in Coils</span>
+								</div>
+								<div class="col-xs-3"></div>
 							</div>
-							<div class="col-xs-2" style="margin: 0px; padding: 0px;">
-								<img src="image/2.1.png" width="50px"/>&nbsp; &nbsp;
-							</div>
-							<div class="col-xs-6">
-								<span>Deformed Steel Bars & Rebar in Coils</span>
-							</div>
+							<hr>
 						</div>
-						<div class="row hr" style="border-top: 1px solid grey;	margin: 0px; padding: 5px;"></div>
-						<div class="row itemdetails_2" style="text-align: center;">
-							<div class="col-xs-3">
-								<span>50 SAR</span>
-							</div>
-							<div class="col-xs-5">
-								<input type="numbertext" name="quantity" placeholder="200" size="5" disabled="disabled">
-								<select name="Unit">
-									<option value="Ton">Ton</option>
-									<option value="Kg">Kg</option>
-								</select>
-							</div>
-							<div class="col-xs-4">
-								<span>Total: 100 SAR</span>
+						
+						<div class="itemdetails_2 col-xs-12" style="text-align: center;">
+							<div class="row">
+								<div class="col-xs-3" style="padding: 0px;">
+									<span>50 SAR</span>
+								</div>
+								<div class="col-xs-5" style="margin: 0px;padding: 0px;">
+									<div class="col-xs-12 hidden-xs" style="margin: 0px;padding: 0px;">
+										<input class="input-xs" type="number" name="quantity" value="200">
+									<select name="Unit">
+										<option value="Ton">Ton</option>
+										<option value="Kg">Kg</option>
+									</select>
+									</div>
+									<div class="col-xs-12 hidden-lg hidden-md hidden-sm" style="margin: 0px;padding: 0px;">
+										<input class="input-xs col-xs-6" type="number" name="quantity" value="200" style="padding: 0px;">
+									<select class="col-xs-6" name="Unit" style="padding: 0px;">
+										<option value="Ton">Ton</option>
+										<option value="Kg">Kg</option>
+									</select>
+									</div>
+								</div>
+								<div class="col-xs-3" style="padding: 0px;">
+									<span>Total: 100 SAR</span>
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row addcart_item1" style="border: 1px solid grey; box-shadow: 2px 2px 4px grey; padding: 5px; font-size: 10px; margin-top: 10px;background-color: #ffffff;">
-						<div class="row itemdetails_1">
-							<div class="col-xs-1">
-								<span>2.</span>
+
+					<div class="row addcart_item1" style="border: 1px solid lightgrey; padding: 5px; font-size: 10px; margin: 5px; background-color: #ffffff; box-shadow: 0 0 3px 2px lightgrey;">
+						<div class="=itemdetails_1 col-xs-12">
+							<div class="row">
+								<div class="col-xs-1">
+									<span>1.</span>
+								</div>
+								<div class="col-xs-2" style="margin: 0px; padding: 0px;">
+									<img src="image/2.1.png" width="50px"/>
+								</div>
+								<div class="col-xs-6">
+									<span>Deformed Steel Bars & Rebar in Coils</span>
+								</div>
+								<div class="col-xs-3"></div>
 							</div>
-							<div class="col-xs-2" style="margin: 0px; padding: 0px;">
-								<img src="image/2.1.png" width="50px"/>&nbsp; &nbsp;
-							</div>
-							<div class="col-xs-6">
-								<span>Deformed Steel Bars & Rebar in Coils</span>
-							</div>
+							<hr>
 						</div>
-
-						<div class="row hr" style="border-top: 1px solid grey;	margin: 0px; padding: 5px;"></div>
-
-						<div class="row itemdetails_2" style="text-align: center;">
-							<div class="col-xs-3">
-								<span>50 SAR</span>
-							</div>
-							<div class="col-xs-5">
-
-								<input type="numbertext" name="quantity" placeholder="200" size="5" disabled="disabled">
-								<select name="Unit">
-									<option value="Ton">Ton</option>
-									<option value="Kg">Kg</option>
-								</select>
-							</div>
-							<div class="col-xs-4">
-								<span>Total: 100 SAR</span>
+						
+						<div class="itemdetails_2 col-xs-12" style="text-align: center;">
+							<div class="row">
+								<div class="col-xs-3" style="padding: 0px;">
+									<span>50 SAR</span>
+								</div>
+								<div class="col-xs-5" style="margin: 0px;padding: 0px;">
+									<div class="col-xs-12 hidden-xs" style="margin: 0px;padding: 0px;">
+										<input class="input-xs" type="number" name="quantity" value="200">
+									<select name="Unit">
+										<option value="Ton">Ton</option>
+										<option value="Kg">Kg</option>
+									</select>
+									</div>
+									<div class="col-xs-12 hidden-lg hidden-md hidden-sm" style="margin: 0px;padding: 0px;">
+										<input class="input-xs col-xs-6" type="number" name="quantity" value="200" style="padding: 0px;">
+									<select class="col-xs-6" name="Unit" style="padding: 0px;">
+										<option value="Ton">Ton</option>
+										<option value="Kg">Kg</option>
+									</select>
+									</div>
+								</div>
+								<div class="col-xs-3" style="padding: 0px;">
+									<span>Total: 100 SAR</span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-	</div>
-
-<!--
-	<br/>
-<div class="row">
-    <div class="col-md-12">
-         <h6>Datetimepicker</h6>
-
-        <label for="date">Date:</label>
-		<input id="date" data-provide="datepicker">
-</div>
-</div>
-
-
-
-<script type="text/javascript">
-	
-var date = new Date();
-date.setDate(date.getDate());
-
-$('#date').datepicker({ 
-    startDate: date
-});
-
-
-</script>
-
-
-
-
-	<label for="name" class="control-label" style="display: inline-block;">
-		<p class="text-info">9876543210</p>
-		<div class="controls">
-        	<a href="#" id="edit" class="btn">Edit</a>
-    	</div>
-	</label>
-    
-	
-    <script type="text/javascript">
-    	$('#edit').click(function() {
-		    var text = $('.text-info').text();
-		    var input = $('<input id="attribute" value="' + text + '" />')
-		    $('.text-info').text('').append(input);
-		    input.select();
-
-		    input.blur(function() {
-		        var text = $('#attribute').val();
-		        $('#attribute').parent().text(text);
-		        $('#attribute').remove();
-		    });
-		});
-    </script>
-
--->
+        	
+  			</div>
+  		</div>
 
 	<script>
 	function openNav() {
@@ -311,24 +331,6 @@ $('#date').datepicker({
 	  document.body.style.backgroundColor = "white";
 	}
 	</script>
-
-	<script type="text/javascript">
-		var dropdown = document.getElementsByClassName("dropdown-btn");
-		var i;
-
-		for (i = 0; i < dropdown.length; i++) {
-		  dropdown[i].addEventListener("click", function() {
-		  this.classList.toggle("active");
-		  var dropdownContent = this.nextElementSibling;
-		  if (dropdownContent.style.display === "block") {
-		  dropdownContent.style.display = "none";
-		  } else {
-		  dropdownContent.style.display = "block";
-		  }
-		  });
-		}
-	</script>
-
 
 </body>
 </html>

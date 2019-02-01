@@ -45,11 +45,7 @@
 			    	<div id="mySidenav" class="sidenav">
 					  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					  <a href="index.html"><i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
-					  <a href="#" class="dropdown-btn"><i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Account</a>
-					  	<div class="dropdown-container">
-						    <a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;My Profile</a>
-					    	<a href="#"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;&nbsp;My Address</a>
-						</div>
+					  <a href="#"><i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Account</a>
 					  <a href="myorders.html"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Orders</a>
 					  <a href="#"><button class="btn btn-default btn-xs" style="font-size: 8px; padding: 2px;margin-left: -5px;">RFQ</button>&nbsp;&nbsp;&nbsp;&nbsp;My RFQ List</a>
 					  <a href="#"><img src="image/icon.png" width="30px" height="30px" style="margin-left: -10px">&nbsp; &nbsp;Support</a>
@@ -83,7 +79,7 @@
 				<div class="sign-in-htm">
 					<div class="group">
 						<label for="user" class="label">Mobile Number</label>
-						<input id="user" type="numbertext" class="input" placeholder="Enter Your Mobile Number" autocomplete="off">
+						<input id="user" type="number" class="input" placeholder="Enter Your Mobile Number" autocomplete="off">
 					</div>
 					<div class="group">
 						<label for="pass" class="label">Password</label>
@@ -109,11 +105,11 @@
 					</div>
 					<div class="group">
 						<label for="pass" class="label">Email Address</label>
-						<input id="pass" type="text" class="input" autocomplete="off" placeholder="Enter Your Email Address">
+						<input id="pass" type="numbertext" class="input" autocomplete="off" placeholder="Enter Your Email Address">
 					</div>
 					<div class="group">
 						<label for="user" class="label">Mobile Number</label>
-						<input id="user" type="numbertext" class="input" placeholder="Enter Your Mobile Number" autocomplete="off">
+						<input id="user" type="number" class="input" placeholder="Enter Your Mobile Number" autocomplete="off">
 					</div>
 					<div class="group">
 						<label for="pass" class="label">Password</label>
@@ -152,23 +148,6 @@
 	  document.body.style.backgroundColor = "white";
 	}
 </script>
-
-<script type="text/javascript">
-		var dropdown = document.getElementsByClassName("dropdown-btn");
-		var i;
-
-		for (i = 0; i < dropdown.length; i++) {
-		  dropdown[i].addEventListener("click", function() {
-		  this.classList.toggle("active");
-		  var dropdownContent = this.nextElementSibling;
-		  if (dropdownContent.style.display === "block") {
-		  dropdownContent.style.display = "none";
-		  } else {
-		  dropdownContent.style.display = "block";
-		  }
-		  });
-		}
-	</script>
 
 
 <script>

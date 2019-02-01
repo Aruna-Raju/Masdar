@@ -73,13 +73,6 @@ input{
   .sidenav a {font-size: 18px;}
 }
 
-
-.dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
-}
-
 /* Optional: Style the caret down icon */
 .fa-caret-down {
   float: right;

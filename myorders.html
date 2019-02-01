@@ -38,8 +38,7 @@
 			        <li><a href="cart_page.html"><i class="fas fa-cart-plus"></i></a></li>
 			        <li><a href="rfq_page.html">RFQ</a></li>
 			        <li><a href="login_signup.html">Login/Sign Up</a></li>
-			        <li><a href="#">My Profile</a></li>
-			        <li><a href="#">My Address</a></li>
+			        <li><a href="#">My Account</a></li>
 			        <li><a class="active" href="myorders.html">My Orders</a></li>
 			        <li><a href="#">My RFQ List</a></li>
 			        <li><a href="#">Support</a></li>
@@ -53,11 +52,7 @@
 					  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					  <a href="index.html"><i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;&nbsp;Home</a>
 					  <a href="login_signup.html"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp; &nbsp;Login/Sign Up</a>
-					  <a href="#" class="dropdown-btn"><i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Account</a>
-					  	<div class="dropdown-container">
-						    <a href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;My Profile</a>
-					    	<a href="#"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;&nbsp;My Address</a>
-						</div>
+					  <a href="#"><i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Account</a>
 					  <a href="myorders.html"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Orders</a>
 					  <a href="#"><button class="btn btn-default btn-xs" style="font-size: 8px; padding: 2px;margin-left: -5px;">RFQ</button>&nbsp;&nbsp;&nbsp;&nbsp;My RFQ List</a>
 					  <a href="#"><img src="image/icon.png" width="30px" height="30px" style="margin-left: -10px">&nbsp; &nbsp;Support</a>
@@ -141,23 +136,6 @@
 	  document.getElementById("main").style.marginLeft= "0";
 	  document.body.style.backgroundColor = "white";
 	}
-	</script>
-
-	<script type="text/javascript">
-		var dropdown = document.getElementsByClassName("dropdown-btn");
-		var i;
-
-		for (i = 0; i < dropdown.length; i++) {
-		  dropdown[i].addEventListener("click", function() {
-		  this.classList.toggle("active");
-		  var dropdownContent = this.nextElementSibling;
-		  if (dropdownContent.style.display === "block") {
-		  dropdownContent.style.display = "none";
-		  } else {
-		  dropdownContent.style.display = "block";
-		  }
-		  });
-		}
 	</script>
 
 

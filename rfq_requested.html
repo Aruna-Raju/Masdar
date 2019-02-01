@@ -113,7 +113,7 @@
 			        <li><a href="login_signup.html">Login/Sign Up</a></li>
 			        <li><a href="#">My Account</a></li>
 			        <li><a href="myorders.html">My Orders</a></li>
-			        <li><a href="#">My RFQ List</a></li>
+			        <li><a href="rfqlist.html">My RFQ List</a></li>
 			        <li><a href="#">Support</a></li>
 			        <li><a href="#">Logout</a></li>
 			    </ul>
@@ -127,7 +127,7 @@
 					  <a href="login_signup.html"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp; &nbsp;Login/Sign Up</a>
 					  <a href="#"><i class="fa fa-suitcase" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Account</a>
 					  <a href="myorders.html"><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;My Orders</a>
-					  <a href="#"><button class="btn btn-default btn-xs" style="font-size: 8px; padding: 2px;margin-left: -5px;">RFQ</button>&nbsp;&nbsp;&nbsp;&nbsp;My RFQ List</a>
+					  <a href="rfqlist.html"><button class="btn btn-default btn-xs" style="font-size: 8px; padding: 2px;margin-left: -5px;">RFQ</button>&nbsp;&nbsp;&nbsp;&nbsp;My RFQ List</a>
 					  <a href="#"><img src="image/icon.png" width="30px" height="30px" style="margin-left: -10px">&nbsp; &nbsp;Support</a>
 					  <a href="#"><i class="fas fa-sign-out-alt"></i>&nbsp; &nbsp;&nbsp;&nbsp;Logout</a>
 					</div>
@@ -149,7 +149,7 @@
 	</div>
 	<div class="empty" style="height: 55px;"></div>
 
-	<center><h4>Order ID : ID003</h4></center>
+	<center><h4>RFQ ID : ID001</h4></center>
 
 
 	<div id="exTab2" class="container">	
@@ -170,9 +170,8 @@
           					<br>
 							<div class="process_bar col-xs-12">
 								<center><ol class="progtrckr" data-progtrckr-steps="5">
-								    <li class="progtrckr-done">Placed</li>
-								    <li class="progtrckr-done" style="white-space: nowrap;">In Process</li>
-								    <li class="progtrckr-done" style="white-space: nowrap;">On The Way</li>
+								    <li class="progtrckr-done">Requested</li>
+								    <li class="progtrckr-todo" style="white-space: nowrap;">In Process</li>
 								    <li class="progtrckr-todo">Delivered</li>
 								</ol></center>
 							</div>	
@@ -182,9 +181,8 @@
 							<div class="col-sm-3"></div>
 							<div class="process_bar col-sm-6">
 								<center><ol class="progtrckr col-sm-12" data-progtrckr-steps="5">
-								    <li class="progtrckr-done">Placed</li>
-								    <li class="progtrckr-done" style="white-space: nowrap;">In Process</li>
-								    <li class="progtrckr-done" style="white-space: nowrap;">On The Way</li>
+								    <li class="progtrckr-done">Requested</li>
+								    <li class="progtrckr-todo" style="white-space: nowrap;">In Process</li>	
 								    <li class="progtrckr-todo">Delivered</li>
 								</ol></center>
 							</div>
@@ -197,12 +195,10 @@
 					
 						<form class="hidden-lg hidden-md hidden-sm">
 						    <div class="form-group">
-						      <label for="delivery date">Delivery Requested Date :</label>
-						      <input class="form-control" type="date" id="delivery date" value="2019-02-10" readonly="readonly" style="font-size: 10px;">
-						      <label for="delivery address">Delivery Address :</label>
-      							<textarea class="form-control" rows="4" id="delivery address" readonly="readonly"  style="font-size: 10px;">Saroj Square 1, 4th Floor Silver Spring Road, Whitefield Main Road, Kundanahalli, Bengaluru</textarea>
-      							<label for="payment">Payment Details :</label>
-      							<input class="form-control" type="text" id="payment" value="Pay On Delivery" readonly="readonly" style="font-size: 10px;">
+						      <label for="email">Email Id :</label>
+      							<input class="form-control" type="text" id="email" value="username@gmail.com" readonly="readonly" style="font-size: 10px;">
+      							<label for="mobile">Phone Number :</label>
+      							<input class="form-control" type="text" id="mobile" value="9876543210" readonly="readonly" style="font-size: 10px;">
 						    </div>
       						<br><br>
 						</form>
@@ -210,12 +206,10 @@
 						<form class="hidden-xs">
 						  	<div class="col-sm-3"></div>
 						    <div class="form-group col-sm-6">
-						      <label for="delivery date">Delivery Requested Date :</label>
-						      <input class="form-control" type="date" id="delivery date" value="2019-02-10" readonly="readonly" style="font-size: 10px;">
-						      <label for="delivery address">Delivery Address :</label>
-      							<textarea class="form-control" rows="4" id="delivery address" readonly="readonly"  style="font-size: 10px;">Saroj Square 1, 4th Floor Silver Spring Road, Whitefield Main Road, Kundanahalli, Bengaluru</textarea>
-      							<label for="payment">Payment Details :</label>
-      							<input class="form-control" type="text" id="payment" value="Pay On Delivery" readonly="readonly" style="font-size: 10px;">
+						      <label for="email">Delivery Address :</label>
+      							<input class="form-control" type="text" id="email" value="username@gmail.com" readonly="readonly" style="font-size: 10px;">
+      							<label for="mobile">Payment Details :</label>
+      							<input class="form-control" type="text" id="mobile" value="9876543210" readonly="readonly" style="font-size: 10px;">
 						    </div>
 						    <div class="col-sm-3"></div>
 						</form>
